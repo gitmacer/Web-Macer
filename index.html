@@ -23,7 +23,15 @@
         rel="noopener">Spotify</a>
 
 <script>
-  if (window.innerWidth < 768) {
+  //info for mobile users auch in deutsch
+  if (window.innerWidth < 768 && navigator.language === 'de-DE') {
+    document.write(`
+    Bitte öffnen Sie den Link in einem neuen Tab
+    <br> https://amzn.to/3V8mUe0  
+    <br> "Dies ist notwendig, da die Amazon-App keine Downloads unterstützt" <br> `);
+  }
+
+  if (window.innerWidth < 768 && navigator.language !== 'de-DE') {
     document.write(`
     Please Open the link in a new tab 
     <br> https://amzn.to/3V8mUe0  
