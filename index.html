@@ -32,28 +32,44 @@
       <a href="https://open.spotify.com/intl-de/artist/7es2pR9BXJsFHcCfV70eAN?si=84Zt_RtiSHePOedkpUiuZQ" target="_blank"
         rel="noopener">Spotify</a>
 
-<script>
-  //info for mobile users auch in deutsch
-  if (window.innerWidth < 768 && navigator.language === 'de-DE') {
-    document.write(`
+      <script>
+        //info for mobile users auch in deutsch
+        if (window.innerWidth < 768 && navigator.language === 'de-DE') {
+          document.write(`
     Bitte öffnen Sie den Link in einem neuen Tab
     <br> https://amzn.to/3V8mUe0  
     <br> "Dies ist notwendig, da die Amazon-App keine Downloads unterstützt" <br> `);
-  }
+        }
 
-  if (window.innerWidth < 768 && navigator.language !== 'de-DE') {
-    document.write(`
+        if (window.innerWidth < 768 && navigator.language !== 'de-DE') {
+          document.write(`
     Please Open the link in a new tab 
     <br> https://amzn.to/3V8mUe0  
     <br> "This is needed because the Amazon app dosn't support downloads" <br> `);
-  }
-</script>
+        }
+
+
+      </script>
       <a href="https://amzn.to/3V8mUe0" target="_blank" rel="noopener">MP3 Soundfile Shop</a>
 
-      <!--Mailjet Form--> 
-<iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://1uppv.mjt.lu/wgt/1uppv/09h6/form?c=f548bfc6" width="100%" style="height: 0;"></iframe>
-<script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v2.js"></script>
-	<!--End Mailjet Form--> 
+      <script>
+        if (navigator.language === 'de-DE') {
+          document.write(`
+            <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://1uppv.mjt.lu/wgt/1uppv/09no/form?c=975d23e1" width="100%" style="height: 0;"></iframe>
+            <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"><\/script>
+          `);
+        }
+      </script>
+
+      <script>
+        if (navigator.language !== 'de-DE') {
+          document.write(`
+            <iframe data-w-type="embedded" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://1uppv.mjt.lu/wgt/1uppv/09h6/form?c=f548bfc6" width="100%" style="height: 0;"></iframe>
+            <script type="text/javascript" src="https://app.mailjet.com/pas-nc-embedded-v1.js"><\/script>
+          `);
+        }
+      </script>
+
 
     </nav>
   </main>
@@ -62,7 +78,7 @@
     <br />
     © 2026 "MACER - Tim Oberle", All rights reserved.
     <!--Warnung vor gefälschten E-mails kurz erklären-->
-      <br />
+    <br />
     <br />
     <div class="warning">
       <p>On suspicions info@macer.me</p>
